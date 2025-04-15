@@ -1,8 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
 
-// Lazy loaded pages
-const Home = lazy(() => import('./pages/Home'))
+// with lazy
+// const Home = lazy(() => import('./pages/Home'))
+
+//wihtout lazy
+import Home from "./pages/Home"
+
 const About = lazy(() => import('./pages/About'))
 
 export default function App() {
