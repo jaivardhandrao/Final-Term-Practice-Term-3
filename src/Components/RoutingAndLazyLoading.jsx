@@ -2,14 +2,17 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
 
 // with lazy
-// const Home = lazy(() => import('./pages/Home'))
+const Home = lazy(() => import('./pages/Home'))
 
 //wihtout lazy
-import Home from "./pages/Home"
+// import Home from "./pages/Home"
+
+const NotFound = lazy(()=> import('./NotFound'))
+
 
 const About = lazy(() => import('./pages/About'))
 
-export default function App() {
+export default function RoutingAndLazyLoading() {
   return (
     <Router>
       <div className="p-6 bg-gray-100 min-h-screen">
@@ -19,7 +22,7 @@ export default function App() {
         </nav>
     
     {/* home and about page are not available, this is only for learning */}
-        <Suspense fallback={<div className="text-center text-gray-600">Loading...</div>}>
+        <Suspense fallback={<NotFound/>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

@@ -10,6 +10,7 @@ import { ThemeProvider } from './Contexts/ThemeContext.jsx'
 import InputFocus from './Components/InputFocus.jsx'
 import FormWithUseRef from './Components/FormWithUseRef.jsx'
 import SortUseMemo from './Components/SortUseMemo.jsx'
+import Qs from './Components/Qs.jsx'
 function App() {
 
 
@@ -30,7 +31,8 @@ function App() {
 
     {/* <InputFocus></InputFocus> */}
     {/* <FormWithUseRef></FormWithUseRef> */}
-    <SortUseMemo></SortUseMemo>
+    {/* <SortUseMemo></SortUseMemo> */}
+    <Qs></Qs>
     </>
   )
 }
